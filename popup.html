@@ -1,0 +1,53 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager với Biểu đồ Gantt</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Quản lý Công việc</h1>
+      <div class="actions">
+        <button id="exportBtn">Export</button>
+        <label for="importFile" class="importBtn">Import</label>
+        <input type="file" id="importFile" accept=".json" style="display: none;">
+      </div>
+    </header>
+    
+    <div class="task-input">
+      <input type="text" id="taskName" placeholder="Tên công việc">
+      <input type="date" id="startDate">
+      <input type="date" id="endDate">
+      <button id="addTaskBtn">Thêm công việc</button>
+    </div>
+    
+    <div class="task-list">
+      <h2>Danh sách công việc</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tên công việc</th>
+            <th>Ngày bắt đầu</th>
+            <th>Ngày kết thúc</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="taskTableBody">
+          <!-- Tasks will be added here dynamically -->
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="gantt-container">
+      <h2>Biểu đồ Gantt</h2>
+      <div id="ganttChart"></div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

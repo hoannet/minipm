@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Task Manager with Gantt Chart",
+  "version": "1.0",
+  "description": "Manage tasks with Gantt charts, sync with Google Cloud Storage, and export/import data",
+  "permissions": [
+    "storage",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://www.googleapis.com/"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.svg",
+      "48": "icons/icon48.svg",
+      "128": "icons/icon128.svg"
+    }
+  },
+  "oauth2": {
+    "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform.read-only",
+      "https://www.googleapis.com/auth/devstorage.read_write"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
